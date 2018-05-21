@@ -17,11 +17,10 @@ contract Airdrop {
     // make a precondition that address is already set
     function removeAddress(address _address) public {
       require(isSet[_address] == true, "Address is not set");
-      isSet[_address] = false;
       for(uint i = 0; i < addresses.length; i++) {
         if(addresses[i] == _address) {
-          isSet[_address] = false;
-          balances[_address] = 0;
+          delete isSet[_address];
+          delete balances[_address];
           delete addresses[i];
           break;
         }
@@ -29,7 +28,8 @@ contract Airdrop {
     }
 
     // implement airdrop(uint value) that increase balance of each address by specified value
-    function airdrop(uint _value) {
+    function airdrop(uint _value) public {
+      require(_value > 0, "Airdrop can only add value, not remove");
       for(uint i = 0; i < addresses.length; i++) {
         if(isSet[addresses[i]]) {
           balances[addresses[i]] += _value;

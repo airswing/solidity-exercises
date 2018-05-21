@@ -13,7 +13,7 @@ block.timestamp   // current block timestamp (alias: now)
 
 ## Function Modifiers
 
-Function modifier can amend the behaviour of functions in a declarative way. Typical use case is to define a precondition before calling a function.
+Function modifier can amend the behavior of functions in a declarative way. Typical use case is to define a precondition before calling a function.
 
 ```
 bool open = false;
