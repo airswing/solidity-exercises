@@ -12,7 +12,7 @@ Getter generated for a public mapping accepts a key as an argument and returns c
 
 ## delete
 
-`delete A` assigns the initial value for the fiven type `A`
+`delete A` assigns the initial value for the given type `A`
 
 * for integers: 0
 * for dynamic arrays: dynamic array of length zero

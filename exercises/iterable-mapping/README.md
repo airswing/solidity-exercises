@@ -11,7 +11,7 @@ uint[5]       // array of size 5
 
 ```
 arr.length    // get number of elements
-arr.push(2)   // append element at the end of dynamic array and return the new lenght
+arr.push(2)   // append element at the end of dynamic array and return the new length
 ```
 
 Getter generated for a public array accepts an index as an argument and returns corresponding value.
